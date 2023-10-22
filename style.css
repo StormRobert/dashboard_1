@@ -5,7 +5,7 @@
     --dark-two: #7a7a7a;
     --dark-three: #0f0c16;
     --main-color: #581a70b9;
-    --light-one: #fff;
+    --color-white: #fff;
     --light-two: #f9fafb;
     --light-three: #f6f7fb;
     --color-success: #7db91d;
@@ -16,7 +16,7 @@
     --color-dark-variant: #677483;
     --color-info-dark: #7d8da1;
     --color-background: #f6f6f9;
-    --color-light: rgba(132, 139, 200, 0.18)
+    --color-light: rgba(132, 139, 200, 0.18);
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -126,7 +126,7 @@ b{
 
 .container{
     display: grid;
-    width: 90%;
+    width: 98%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 12rem auto 23rem;
@@ -141,7 +141,7 @@ aside .toggle{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1.4rem;
+    margin-top: 1rem;
 
 }
 
@@ -151,8 +151,8 @@ aside .toggle .logo{
 }
 
 aside .toggle .logo img{
-    width: 5rem;
-    height: 5rem;
+    width: 3.7rem;
+    height: 3.5rem;
 }
 
 aside .toggle .close{
@@ -179,5 +179,114 @@ aside .sidebar a{
     display: flex;
     align-items: center;
     color: var(--color-info-dark);
-    height: 3.7rem;
+    height: 4rem;  /* spaces in between the a content(dashboard, user, history) */
+    gap: 1rem;  /* space in betwwen the icons and their names */
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
 }
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+
+}
+
+/* log out */
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color:  rgba(132, 139, 200, 0.18);
+    margin-left: 0;
+
+}
+/* sidebar line */
+aside .sidebar a.active::before{
+    content: '';
+    width:6px;
+    height: 18px;
+    background-color: var(--main-color);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+    color: var(--main-color);
+}
+
+aside .sidebar:hover span{
+    margin-left: 0.45rem;
+    /* hover making the span details to move to the left once cursor hovers */
+}
+
+aside .sidebar .message-count{
+    background-color: var(--color-danger);
+    border-radius: 20%;
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 13.5px;
+}
+
+main{
+    margin-top: 3rem;
+
+}
+ main .analyse{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+ }
+
+ main .analyse > div{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);   
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+ }
+
+ main .analyse > div:hover{
+    box-shadow: none;
+ }
+
+ main .analyse > div .status{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+ }
+ main .analyse h3 {
+    margin-left: 0.9rem;
+    font-size: 1rem;
+ }
+
+ main .analyse .progress{
+    position: relative;
+    height: 98px;
+    width: 98px;
+    border-radius: 50%;
+ }
+
+ main .analyse svg{
+    width: 7rem;
+    height: 7rem;
+
+ }
+ main .analyse svg circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px 5px);
+
+ }
