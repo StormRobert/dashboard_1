@@ -287,6 +287,43 @@ main{
     fill: none;
     stroke-width: 10;
     stroke-linecap: round;
-    transform: translate(5px 5px);
+    transform: translate(3px, 3px);
 
  }
+
+ main .analyse .sales svg circle{
+    stroke: var(--color-success);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 250;
+ }
+
+ main .analyse .visits svg circle{
+    stroke: var(--color-danger);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 250;
+ }
+
+ main .analyse .searches svg circle{
+    stroke: var(--color-primary);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 250;
+ }
+
+ main .analyse .progress .percentage{
+    position:absolute;
+    top: -3px;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112%;
+    width: 110%;
+ }
+
+ main .new-users{
+    margin-top: 1.3rem;
+ }
+ main .new-users .user-list{
+    background-color: var(--color-white);
+ }
+
