@@ -10,13 +10,13 @@
     --light-three: #f6f7fb;
     --color-success: #7db91d;
     --color-danger: #FF0060;
-    --color-warning: #F7D060;
-    --color-primary: #6c9BCF;
+    --color-warning: #dfac13;
+    --color-primary: #416da0;
     --color-dark: #363949;
     --color-dark-variant: #677483;
     --color-info-dark: #7d8da1;
     --color-background: #f6f6f9;
-    --color-light: rgba(132, 139, 200, 0.18);
+    --color-light: rgba(58, 69, 167, 0.18);
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -26,6 +26,8 @@
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(--color-light);
+    --box-shadow-2:0 0.3rem 1.2rem rgba(12, 12, 15, 0.18);
+
 
 
   }
@@ -37,6 +39,7 @@
     --color-dark-variant: #a3bdcc;
     --color-light: rgba(0, 0, 0, 0.4);
     --box-shadow:0 2rem 3rem var(--color-light);
+    --box-shadow-2:0 0.3rem 1.2rem rgba(12, 12, 15, 0.18);
 
   }
 
@@ -336,7 +339,7 @@ main{
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1.4rem;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 0.3s ease;
  }
 
@@ -350,14 +353,49 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    text-align: center;
+    width: 12rem;
+    border-radius: 20%;
+    box-shadow: var(--box-shadow);
+ }
+ main .new-users .user-list .user:hover{
+    cursor: pointer;
+    transform: scale(1.2) translateY(-2px) translateX(2px);
+    transition: all 0.5s ease;
  }
 
  main .new-users .user-list img{
     width: 5rem;
     height: 5rem;
     margin-bottom: 0.4rem;
-    border-radius: 50% ;
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow-2) ;
+    
 
  }
 
+ main .recent-orders{
+    margin-top: 1.3 rem;
+ }
+
+ main .recent-orders h2{
+    margin-bottom: 0.8rem;
+ }
+
+ main .recent-orders table {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+ }
+
+ main .recent-orders table:hover{
+    box-shadow: none;
+    cursor: pointer;
+    transform: scale(1.028) translateX(2px);
+
+ }
