@@ -244,6 +244,7 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    
  }
 
  main .analyse > div{
@@ -254,10 +255,12 @@ main{
     margin-top: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    
  }
 
  main .analyse > div:hover{
     box-shadow: none;
+    transform: scale(1.028) translateY(-2px);
  }
 
  main .analyse > div .status{
@@ -325,5 +328,36 @@ main{
  }
  main .new-users .user-list{
     background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+ }
+
+ main .new-users .user-list:hover{
+    box-shadow: none;
+    transform: scale(1.028) translateY(-2px);
+
+ }
+
+ main .new-users .user-list .user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+ }
+
+ main .new-users .user-list img{
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.4rem;
+    border-radius: 50% ;
+
  }
 
