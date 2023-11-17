@@ -55,7 +55,6 @@
 
   html{
     font-size: 14px;
-
   }
 
   body{
@@ -67,12 +66,10 @@
     overflow-x: hidden;
     color: var(--color-dark);
     background-color: var(--color-background);
-
   }
 
   a{
     color: var(--color-dark);
-    
   }
 img{
     display:block;
@@ -105,7 +102,6 @@ p{
 
 b{
     color: var(--color-dark);
-
 }
 
 .text-muted{
@@ -133,7 +129,6 @@ b{
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 12rem auto 23rem;
-
 }
 
 aside{
@@ -145,7 +140,6 @@ aside .toggle{
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem;
-
 }
 
 aside .toggle .logo{
@@ -172,7 +166,6 @@ aside .sidebar{
     position: relative;
     top: 1.5rem;
     transition: all 0.3s ease;
-
 }
 aside .sidebar:hover {
     box-shadow:none;
@@ -192,14 +185,12 @@ aside .sidebar a{
 aside .sidebar a span{
     font-size: 1.6rem;
     transition: all 0.3s ease;
-
 }
 
 /* log out */
 aside .sidebar a:last-child{
     position: absolute;
     bottom: 2rem;
-
 }
 
 aside .sidebar a.active{
@@ -207,7 +198,6 @@ aside .sidebar a.active{
     color: var(--color-primary);
     background-color:  rgba(132, 139, 200, 0.18);
     margin-left: 0;
-
 }
 /* sidebar line */
 aside .sidebar a.active::before{
@@ -371,8 +361,6 @@ main{
     background-color: var(--color-background);
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow-2) ;
-    
-
  }
 
  main .recent-orders{
@@ -387,7 +375,7 @@ main{
     background-color: var(--color-white);
     width: 100%;
     padding: var(--card-padding);
-    border-radius: var(--border-radius-1);
+    border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
     text-align: center;
     transition: all 0.3s ease;
@@ -395,7 +383,38 @@ main{
 
  main .recent-orders table:hover{
     box-shadow: none;
-    cursor: pointer;
     transform: scale(1.028) translateX(2px);
+ }
 
+ main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+    cursor: pointer;
+ }
+ main table tbody tr:last-child td{
+    border: none;
+ }
+
+ main .recent-orders a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+ }
+
+ .right-section{
+    margin-top: 1.4rem;
+ }
+ .right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+ }
+ .right-section .nav button{
+    display: none;
+ }
+
+ .right-section .dark-mode{
+    background-color: var(--color-light);
  }
